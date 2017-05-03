@@ -13,3 +13,6 @@ plot(surf.df) # scatter plot matrix
 ## Contour plot
 surf.mat <- matrix(surf.df$z, nrow=11)
 contour(seq(0,1,0.1), seq(0,1,0.1), surf.mat)
+
+surf.lm <- lm(z ~ x + y, data = surf.df)
+summary(surf.lm)
