@@ -1,1 +1,2 @@
-# Simple linear spatial regression
+## Simple linear spatial regression
+## Grid creation
