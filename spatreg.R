@@ -7,12 +7,13 @@ plot(x.co,y.co, asp=T)
 surf.df <- data.frame(x=x.co, y=y.co)
 plot(surf.df, asp=TRUE)
 
-surf.df$z <- surf.df$x + surf.df$y + rnorm(121,sd=0.05)
+surf.df$z <- 5*surf.df$x - surf.df$y + rnorm(121,sd=0.05)
 plot(surf.df) # scatter plot matrix
 
 ## Contour plot
 surf.mat <- matrix(surf.df$z, nrow=11)
 contour(seq(0,1,0.1), seq(0,1,0.1), surf.mat)
 
-surf.lm <- lm(z ~ x + y, data = surf.df)
+surf.lm <- lm(z ~ x + y - 1, data = surf.df)
 summary(surf.lm)
+plot(surf.lm)
