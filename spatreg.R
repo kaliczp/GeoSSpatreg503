@@ -28,3 +28,6 @@ plot(topo$x, topo$y, asp=T)
 library(spatial)
 
 topo.ls <- surf.ls(2, topo)
+trsurf <- trmat(topo.ls,0,6.5,0,6.5,50)
+eqscplot(trsurf, typ="n")
+contour(trsurf, add=T)
