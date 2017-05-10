@@ -43,3 +43,4 @@ contour(topo.ma$x, topo.ma$y, topo.lo$fit, add=T)
 
 eqscplot(topo.ma, typ="n")
 contour(topo.ma$x, topo.ma$y, topo.lo$se.fit, levels = seq(5,25,2), add=T)
+points(topo)
