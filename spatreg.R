@@ -24,3 +24,7 @@ library(MASS)
 data(topo)
 ## overview of dataset
 head(topo)
+plot(topo$x, topo$y, asp=T)
+library(spatial)
+
+topo.ls <- surf.ls(2, topo)
