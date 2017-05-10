@@ -29,5 +29,8 @@ library(spatial)
 
 topo.ls <- surf.ls(2, topo)
 trsurf <- trmat(topo.ls,0,6.5,0,6.5,50)
+# Plot result
 eqscplot(trsurf, typ="n")
 contour(trsurf, add=T)
+points(topo)
+text(topo, lab=topo$z,adj=c(0,1))
