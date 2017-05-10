@@ -19,3 +19,8 @@ summary(surf.lm)
 plot(surf.lm)
 
 surf.lm <- lm(z ~ x + y +I(x^2) + I(y^2) - 1, data = surf.df)
+
+library(MASS)
+data(topo)
+## overview of dataset
+head(topo)
