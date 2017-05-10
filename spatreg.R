@@ -35,7 +35,7 @@ contour(trsurf, add=T)
 points(topo)
 text(topo, lab=topo$z,adj=c(0,1))
 
-topo.loess <- loess(z ~ x * y, topo)
+topo.loess <- loess(z ~ x * y, topo, span=0.25, normalize = F)
 topo.ma <- list(x=seq(0,6.5,0.1),y=seq(0,6.5,0.1))
 topo.lo <- predict(topo.loess, expand.grid(topo.ma), se=T)
 eqscplot(topo.ma, typ="n")
