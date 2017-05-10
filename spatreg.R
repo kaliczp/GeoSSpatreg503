@@ -40,3 +40,6 @@ topo.ma <- list(x=seq(0,6.5,0.1),y=seq(0,6.5,0.1))
 topo.lo <- predict(topo.loess, expand.grid(topo.ma), se=T)
 eqscplot(topo.ma, typ="n")
 contour(topo.ma$x, topo.ma$y, topo.lo$fit, add=T)
+
+eqscplot(topo.ma, typ="n")
+contour(topo.ma$x, topo.ma$y, topo.lo$se.fit, levels = seq(5,25,2), add=T)
