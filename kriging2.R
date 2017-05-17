@@ -61,3 +61,10 @@ class(meuse.grid)
 plot(meuse.gir)
 plot(meuse.grid)
 points(meuse)
+
+m <- vgm(.39, "Sph", 1100, .08)
+plot(v,m)
+
+m.k1 <- krige(log(zinc)~1, meuse, meuse.grid, model=m)
+plot(m.k1)
+spplot(m.k1["var1.pred"])
