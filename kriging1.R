@@ -3,4 +3,10 @@ library(spatial)
 library(MASS)
 data(topo)
 topo.ls <- surf.ls(2, topo)
-correlogram(topo.ls, 70) #let's change "nint" arg.
+correlogram(topo.ls, 25) #let's change "nint" arg.
+
+d <- seq(0, 7, 0.3)
+lines(d, expcov(d, 0.7))
+lines(d, gaucov(d, 1.0, 0.3), lty = 3)
+
+variogram(topo.ls, 25)
