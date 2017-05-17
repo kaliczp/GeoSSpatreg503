@@ -31,3 +31,12 @@ boxplot(log(meuse$zinc))
 
 coordinates(meuse) <- ~x+y
 hscat(log(zinc)~1, meuse, c(0, 80, 120, 250, 500, 1000))
+
+var.b=variogram(log(zinc)~1, meuse)
+plot(var.b)
+
+var.cloud=variogram(log(zinc)~1, meuse, cloud=T)
+plot(var.cloud)
+
+var.res= variogram(log(zinc)~x+y, meuse)
+plot(var.res)
