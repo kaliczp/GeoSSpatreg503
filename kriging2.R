@@ -9,3 +9,7 @@ class(topo)
 plot(topo)
 axis(1)
 axis(2)
+box()
+
+library(gstat)
+hscat(z ~ 1, topo, 0:7)
