@@ -40,3 +40,14 @@ plot(var.cloud)
 
 var.res= variogram(log(zinc)~x+y, meuse)
 plot(var.res)
+
+var.res.dir <- variogram(log(zinc)~x+y, meuse, alpha=c(0,45,90,135))
+plot(var.res.dir)
+
+plot(variogram(log(zinc)~1, meuse, width=90, cutoff=1300))
+
+## Variogram modelling
+v = variogram(log(zinc)~x+y, meuse)
+v.fit = fit.variogram(v, vgm(1, "Sph", 700, 1))
+v.fit
+plot(v,v.fit)
