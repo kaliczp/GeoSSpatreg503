@@ -68,3 +68,6 @@ plot(v,m)
 m.k1 <- krige(log(zinc)~1, meuse, meuse.grid, model=m)
 plot(m.k1)
 spplot(m.k1["var1.pred"])
+
+m.k2 <- krige(log(zinc)~1, meuse, meuse.grid, model=m, beta=5.9)
+m.k3 <- krige(log(zinc)~x+y, meuse, meuse.grid, model=m)
