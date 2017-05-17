@@ -51,3 +51,13 @@ v = variogram(log(zinc)~x+y, meuse)
 v.fit = fit.variogram(v, vgm(1, "Sph", 700, 1))
 v.fit
 plot(v,v.fit)
+
+show.vgms()
+vgm()
+
+data("meuse.grid")
+gridded(meuse.grid) <- ~x+y
+class(meuse.grid)
+plot(meuse.gir)
+plot(meuse.grid)
+points(meuse)
