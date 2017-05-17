@@ -13,3 +13,6 @@ box()
 
 library(gstat)
 hscat(z ~ 1, topo, 0:7)
+
+var.z <- variogram(z ~ 1, topo)
+plot(var.z)
