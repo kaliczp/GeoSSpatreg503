@@ -24,3 +24,10 @@ var.res <- variogram(z ~ x + y , topo)
 plot(var.res)
 
 data(meuse)
+hist(meuse$zinc)
+hist(log(meuse$zinc))
+boxplot(meuse$zinc)
+boxplot(log(meuse$zinc))
+
+coordinates(meuse) <- ~x+y
+hscat(log(zinc)~1, meuse, c(0, 80, 120, 250, 500, 1000))
