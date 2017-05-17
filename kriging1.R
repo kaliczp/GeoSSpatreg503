@@ -17,3 +17,5 @@ topo.kr <- surf.gls(2, expcov, topo, d=0.7)
 correlogram(topo.kr,25)
 variogram(topo.kr,25)
 
+prsurf <- prmat(topo.kr, 0, 6.5, 0, 6.5, 50)
+contour(prsurf)
