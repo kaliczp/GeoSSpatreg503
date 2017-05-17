@@ -16,3 +16,11 @@ hscat(z ~ 1, topo, 0:7)
 
 var.z <- variogram(z ~ 1, topo)
 plot(var.z)
+
+var.zcloud <- variogram(z ~ 1, topo, cloud=T)
+plot(var.zcloud)
+
+var.res <- variogram(z ~ x + y , topo)
+plot(var.res)
+
+data(meuse)
